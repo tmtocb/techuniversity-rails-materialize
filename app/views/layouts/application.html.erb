@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TechUniversityMaterialize</title>
+    <title>Tech University</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,13 +9,22 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    
+
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <%= render 'shared/shim' %>
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <%= render 'shared/navbar' %>
+    </header>
+    <main>
+      <div class="container">
+        <%= yield %>
+      </div>
+    </main>
+    <footer>
+    </footer>
   </body>
 </html>
