@@ -16,9 +16,9 @@ gem 'webpacker', '~> 4.0'
 group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'guard'
   gem 'guard-rspec', require: false
+  gem 'pry-rails'
   gem 'rspec-rails', '~> 4.0.2'
 end
 
