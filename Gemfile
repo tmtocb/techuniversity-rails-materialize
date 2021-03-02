@@ -14,7 +14,12 @@ gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.0'
 
 group :development, :test do
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'guard'
+  gem 'guard-rspec', require: false
+  gem 'rspec-rails', '~> 4.0.2'
 end
 
 group :development do
@@ -22,4 +27,11 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
+  gem 'shoulda-matchers', '~> 4.0'
 end
