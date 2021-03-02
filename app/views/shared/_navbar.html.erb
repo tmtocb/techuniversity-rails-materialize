@@ -13,10 +13,10 @@
 <nav>
   <div class="container">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo center">Tech University</a>
+      <%= link_to 'University of Technology', root_path, class: 'brand-logo center' %>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="#">Courses</a></li>
+        <li><%= link_to 'Courses', courses_path %></li>
         <li><a href="#">Enrollments</a></li>
         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
