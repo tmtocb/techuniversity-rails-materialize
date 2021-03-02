@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get '/about', to: 'pages#about'
+  get 'about', to: 'pages#about'
 end
