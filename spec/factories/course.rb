@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :course do
-    description { Faker::Demographic.race }
-    name { Faker::Demographic.demonym }
-    short_name { Faker::Beer.brand }
+    description { Faker::Lorem.question(word_count: 4) }
+    name { Faker::ProgrammingLanguage.creator }
+    short_name { Faker::Restaurant.name }
   end
 end
