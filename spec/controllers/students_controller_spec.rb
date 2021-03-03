@@ -37,6 +37,22 @@ describe StudentsController do
     end
   end
 
+  describe "GET show" do
+    before { get :show, params: params }
+    let(:params) do
+      { id: student.id }
+    end
+    let!(:student) { create(:student) }
+
+    it "assigns @student" do
+      expect(assigns(:student)).to eq(student)
+    end
+
+    it 'renders the show template' do
+      expect(response).to render_template(:show)
+    end
+  end
+
   describe 'GET new' do
     before { get :new }
 
