@@ -1,7 +1,8 @@
 FactoryBot.define do
-  factory :user do
+  factory :student do
     name { Faker::Name.name }
     email { Faker::Internet.email }
-    password { password1 }
+    password { 'password' }
+    password_confirmation { 'password' }
   end
 end
