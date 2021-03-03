@@ -68,4 +68,21 @@ describe StudentsController do
       expect(response).to have_http_status(200)
     end
   end
+
+  describe 'GET edit' do
+    before { get :edit, params: params }
+    let(:params) do
+      { id: student.id }
+    end
+    let!(:student) { create(:student) }
+
+    it 'assigns @student' do
+      subject
+      expect(assigns(:student)).to eq(student)
+    end
+
+      it 'renders the edit template' do
+        expect(response).to render_template(:edit)
+      end
+  end
 end
