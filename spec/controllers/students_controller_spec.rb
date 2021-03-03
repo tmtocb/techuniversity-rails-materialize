@@ -36,4 +36,20 @@ describe StudentsController do
       end
     end
   end
+
+  describe 'GET new' do
+    before { get :new }
+
+    it 'assigns @student' do
+      expect(assigns(:student)).to be_a_new(Student)
+    end
+
+    it 'renders the new template' do
+      expect(response).to render_template(:new)
+    end
+
+    it do
+      expect(response).to have_http_status(200)
+    end
+  end
 end
